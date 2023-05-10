@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <title>Refugee Ontology</title>
+</head>
+
+<body>
+    <nav>
+        <h1>REFUGEE ONTOLOGY</h1>
+        <a href="#query">QUERY  </a>
+        <a href="#concept">CONCEPT</a>
+        <a href="#abstract">ABSTRACT</a>
+    </nav>
+    <main>
+        <div class="intro">
+            <aside class="left-intro">
+                <h2>THE TITLE OF PAPER</h2>
+                <a href="#abstract" class="learn">LEARN MORE</a>
+            </aside>
+            <section class="right-intro">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis accusantium consectetur
+                    aspernatur nobis facere corporis dolores beatae voluptate harum sint sit nam inventore placeat,
+                    earum neque ullam voluptatibus nostrum ipsa quam! Explicabo eaque qui saepe temporibus adipisci,
+                    laudantium, aspernatur, totam assumenda repellat cumque voluptatem recusandae nostrum. Expedita, rem
+                    ipsa temporibus corrupti perspiciatis excepturi quibusdam sunt? Expedita, nisi id voluptatibus
+                    numquam soluta nemo? Sunt est dolorem aspernatur ratione iste cum fugiat quos labore, quisquam illum
+                    consequuntur veniam ipsam architecto ab explicabo, pariatur repudiandae veritatis eligendi.
+                    Dignissimos ullam, labore asperiores rem porro officia corrupti dolores magnam quod autem nostrum
+                    quas iste!
+
+                </p>
+            </section>
+        </div>
+        <hr />
+        <div class="abstract">
+            <section class="abstract-section">
+                <header class="abstract-header">
+                    <a id="abstract">ABSTRACT</a>
+                </header>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nisi eveniet ex tempora debitis
+                    nemo minima eius quisquam velit blanditiis quibusdam esse, ipsam eligendi sit minus suscipit qui
+                    tempore, ut sapiente, natus saepe exercitationem ipsum reiciendis libero. Incidunt laborum a nam
+                    ipsum consequatur eveniet iure, provident dolor saepe modi corporis optio ratione, quia veritatis
+                    sequi facere? Atque fugit soluta corporis temporibus delectus quam unde suscipit, expedita quae nam
+                    quibusdam iusto. Molestiae earum sequi quis nam? Molestias velit aperiam ea beatae ducimus soluta
+                    totam pariatur architecto, minima sit rem, laudantium harum quo! Dignissimos, quos voluptas rem et
+                    illo dolores reprehenderit soluta molestiae tempore natus consequuntur nesciunt minima, repellat
+                    cumque, dolore excepturi at id? Aliquam pariatur aperiam perferendis ullam a soluta similique rerum
+                    praesentium modi eveniet exercitationem magni, illum qui libero dolorum officia repudiandae nemo,
+                    quod cumque dolore! Tenetur, rem id magnam non nostrum rerum quos incidunt nesciunt recusandae odit
+                    suscipit doloribus officiis. Dolorum nostrum adipisci et soluta perspiciatis quod voluptatibus
+                    tenetur! Nesciunt magnam ipsum aperiam voluptatum! Aut magnam illo ducimus ab nemo praesentium
+                    fugit, nostrum molestiae consequatur, dolorem necessitatibus earum vel? Beatae suscipit, maxime
+                    provident ipsa eos minus debitis cumque culpa tempora iure neque nihil possimus facere, eligendi
+                    quam? Eius, veniam.
+
+                </p>
+            </section>
+        </div>
+
+        <hr />
+        <div>
+            <header class="concept-header"><a id="concept">CONCEPT</a></header>
+            <div class="concept">
+
+                <aside class="graph1 left-concept">
+                    <svg id="main-graph" width="800" height="600"></svg>
+                </aside>
+                <section class="right-concept">
+                    <h3>EXPLANATION</h3>
+                    <p id="description"></p>
+                </section>
+            </div>
+        </div>
+        <hr />
+        <div>
+            <header class="query-header">
+                <a id="query">QUERY EXPLANATION</a>
+            </header>
+            <div class="query">
+
+                <aside class="left-query">
+                    <p id="description_query"></p>
+                </aside>
+                <section class="right-query">
+                    <svg width="400" height="300" id="svg_query"></svg>
+                </section>
+                <button class="query-button" onclick="query1()">Has Agency</button>
+                <button class="query-button" onclick="query2()">Refugee Would Be Returnee</button>
+                <button class="query-button" onclick="query3()">Refugee Would Be Returnee But Only Refugee</button>
+                <button class="query-button" onclick="query4()">Subclass Of Refugee</button>
+                <button class="query-button" onclick="query5()">The Properties Of Refugees Who Are Would Be Returnee</button>
+            </div>
+        </div>
+    </main>
+    <hr />
+    <footer></footer>
+    <script src="index1.js"></script>
+    <script src="query1.js"></script>
+</body>
+
+</html>

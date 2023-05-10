@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif, Arial, Helvetica;
+    background-color: #e7dfd8;
+    color: #302b25;
+    margin: 0%;
+    line-height: 1.5em;
+}
+hr{
+    width: 90%;
+    margin-top: 10%;
+    color: #302b25a7;
+}
+h2 {
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+
+.learn {
+    text-decoration: none;
+    background-color: #302b25;
+    color: #e7dfd8;
+    border-radius: 5px;
+    padding: 15px 32px;
+    margin: 4px 2px;
+}
+
+.learn:hover {
+    background-color: #463f37;
+}
+
+
+h1 {
+    color: #e7dfd8;
+    display: inline-block;
+    margin: 5px;
+}
+
+nav {
+    padding: 10px;
+    background-color: #302b25;
+    overflow: hidden;
+    align-items: center;
+}
+
+nav a {
+    float: right;
+    display: block;
+    color: #e7dfd8;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #463f37;
+    color: #e7dfd8;
+}
+
+.intro {
+    display: flex;
+
+}
+
+.left-intro {
+    flex: 40%;
+    padding: 30px;
+}
+
+.right-intro {
+    flex: 60%;
+    padding: 30px;
+    padding-top: 50px;
+}
+
+.abstract {
+    text-align: center;
+}
+
+.abstract-header {
+    padding: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.abstract-section {
+    padding: 30px;
+}
+
+.abstract p {
+    text-align: center;
+}
+
+.concept {
+    display: flex;
+}
+
+.concept-header {
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    align-items: center;
+}
+
+.left-concept {
+    flex: 30%;
+    padding: 20px;
+}
+
+.right-concept {
+    flex: 70%;
+    padding: 20px;
+}
+
+.query {
+    text-align: center;
+}
+
+.query-header {
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    align-items: center;
+}
+
+.left-query {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+    padding: 30px;
+    
+}
+
+.right-query {
+    display: inline-block;
+    width: 49%;
+    padding: 30px;
+    
+}
+
+.query-button {
+    background-color: #302b25;
+    border: none;
+    color: #e7dfd8;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.query-button:hover {
+    background-color: #463f37;
+}
+
+header {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding: 15%;
+}
+footer{
+    width: auto;
+    margin: 10%;
+    padding: 10%;
+}
+
+@media (max-width: 900px) {
+
+    .intro,
+    .concept,
+    .query {
+        flex-direction: column;
+    }
+}
