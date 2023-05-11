@@ -1,93 +1,124 @@
-const nodes1 = [
-    { "name": "PHDStudent",       "description": "description" },
-    { "name": "Samer1",           "description": "description" },
-    { "name": "PHD",              "description": "description" },
-    { "name": "TestAgencyQuery2", "description": "description" },
-    { "name": "TestAgencyQuery1", "description": "description" },
-    { "name": "Samer3",           "description": "description" },
-    { "name": "Poor",             "description": "description" }
-];
+// const nodes1 = [
+//     { "name": "PHDStudent",       "description": "description" },
+//     { "name": "Samer1",           "description": "description" },
+//     { "name": "PHD",              "description": "description" },
+//     { "name": "TestAgencyQuery2", "description": "description" },
+//     { "name": "TestAgencyQuery1", "description": "description" },
+//     { "name": "Samer3",           "description": "description" },
+//     { "name": "Poor",             "description": "description" }
+// ];
 
-const edges1 = [
-    { "source": "PHDStudent",       "target": "Samer1", "relationship": "Label" },
-    { "source": "Samer1",           "target": "PHD",    "relationship": "Label" },
-    { "source": "TestAgencyQuery2", "target": "PHD",    "relationship": "Label" },
-    { "source": "TestAgencyQuery1", "target": "PHD",    "relationship": "Label" },
-    { "source": "Samer3",           "target": "Poor",   "relationship": "Label" }
-];
+// const edges1 = [
+//     { "source": "PHDStudent",       "target": "Samer1", "relationship": "Label" },
+//     { "source": "Samer1",           "target": "PHD",    "relationship": "Label" },
+//     { "source": "TestAgencyQuery2", "target": "PHD",    "relationship": "Label" },
+//     { "source": "TestAgencyQuery1", "target": "PHD",    "relationship": "Label" },
+//     { "source": "Samer3",           "target": "Poor",   "relationship": "Label" }
+// ];
 
-const nodes2 = [
-    { "name": "NamedIndividual", "description": "description" },
-    { "name": "Samer1",          "description": "description" },
-    { "name": "Refugee",         "description": "description" }
-];
+// const nodes2 = [
+//     { "name": "NamedIndividual", "description": "description" },
+//     { "name": "Samer1",          "description": "description" },
+//     { "name": "Refugee",         "description": "description" }
+// ];
 
-const edges2 = [
-    { "source": "Samer1", "target": "NamedIndividual", "relationship": "Label" },
-    { "source": "Samer1", "target": "Refugee",         "relationship": "Label" }
-];
+// const edges2 = [
+//     { "source": "Samer1", "target": "NamedIndividual", "relationship": "Label" },
+//     { "source": "Samer1", "target": "Refugee",         "relationship": "Label" }
+// ];
 
-const nodes3 = [
-    { "name": "HighAgency",       "description": "description" },
-    { "name": "TestAgencyQuery2", "description": "description" },
-    { "name": "Samer1",           "description": "description" },
-    { "name": "PHD",              "description": "description" },
-    { "name": "PHDStudent",       "description": "description" }
-];
+// const nodes3 = [
+//     { "name": "HighAgency",       "description": "description" },
+//     { "name": "TestAgencyQuery2", "description": "description" },
+//     { "name": "Samer1",           "description": "description" },
+//     { "name": "PHD",              "description": "description" },
+//     { "name": "PHDStudent",       "description": "description" }
+// ];
 
-const edges3 = [
-    { "source": "TestAgencyQuery2", "target": "PHD", "relationship": "HasAgency" },
-    { "source": "PHD",              "target": "HighAgency", "relationship": "Label" },
-    { "source": "PHDStudent",       "target": "HighAgency", "relationship": "Label" },
-    { "source": "Samer1",           "target": "PHD", "relationship": "HasAgency" },
-    { "source": "Samer1",           "target": "PHDStudent", "relationship": "HasAgency" }
-];
+// const edges3 = [
+//     { "source": "TestAgencyQuery2", "target": "PHD", "relationship": "HasAgency" },
+//     { "source": "PHD",              "target": "HighAgency", "relationship": "Label" },
+//     { "source": "PHDStudent",       "target": "HighAgency", "relationship": "Label" },
+//     { "source": "Samer1",           "target": "PHD", "relationship": "HasAgency" },
+//     { "source": "Samer1",           "target": "PHDStudent", "relationship": "HasAgency" }
+// ];
 
-const nodes4 = [
-    { "name": "IllegalRefugee", "description": "description" },
-    { "name": "LegalRefugee",   "description": "description" },
-    { "name": "Refugee",        "description": "description" },
-    { "name": "Nationalized",   "description": "description" },
-    { "name": "Stayee",         "description": "description" }
-];
+// const nodes4 = [
+//     { "name": "IllegalRefugee", "description": "description" },
+//     { "name": "LegalRefugee",   "description": "description" },
+//     { "name": "Refugee",        "description": "description" },
+//     { "name": "Nationalized",   "description": "description" },
+//     { "name": "Stayee",         "description": "description" }
+// ];
 
-const edges4 = [
-    { "source": "IllegalRefugee", "target": "Refugee", "relationship": "Label" },
-    { "source": "LegalRefugee",   "target": "Refugee", "relationship": "Label" },
-    { "source": "Nationalized",   "target": "Refugee", "relationship": "Label" },
-    { "source": "Stayee",         "target": "Refugee", "relationship": "Unknwon" }
-];
-
-/* THERE ARE SOME DELETED NODES AND RELATIONS*/
-const nodes5 = [
-    { "name": "NamedIndividual",    "description": "description" },
-    { "name": "TestAgencyQuery1",   "description": "description" },
-    { "name": "WouldBeReturnee",    "description": "description" },
-    { "name": "PHD", "description": "description" }
-];
-
-const edges5 = [
-    { "source": "TestAgencyQuery1", "target": "NamedIndividual", "relationship": "Label" },
-    { "source": "TestAgencyQuery1", "target": "WouldBeReturnee", "relationship": "Label" },
-    { "source": "TestAgencyQuery1", "target": "PHD",             "relationship": "HasAgency" }
-];
+// const edges4 = [
+//     { "source": "IllegalRefugee", "target": "Refugee", "relationship": "Label" },
+//     { "source": "LegalRefugee",   "target": "Refugee", "relationship": "Label" },
+//     { "source": "Nationalized",   "target": "Refugee", "relationship": "Label" },
+//     { "source": "Stayee",         "target": "Refugee", "relationship": "Unknwon" }
+// ];
 
 
-function query1() {
-    go(nodes1, edges1);
-}
-function query2() {
-    go(nodes2, edges2);
-}
-function query3() {
-    go(nodes3, edges3);
-}
-function query4() {
-    go(nodes4, edges4);
-}
-function query5() {
-    go(nodes5, edges5);
-}
+// const nodes5 = [
+//     { "name": "NamedIndividual",    "description": "description" },
+//     { "name": "TestAgencyQuery1",   "description": "description" },
+//     { "name": "WouldBeReturnee",    "description": "description" },
+//     { "name": "PHD", "description": "description" }
+// ];
+
+// const edges5 = [
+//     { "source": "TestAgencyQuery1", "target": "NamedIndividual", "relationship": "Label" },
+//     { "source": "TestAgencyQuery1", "target": "WouldBeReturnee", "relationship": "Label" },
+//     { "source": "TestAgencyQuery1", "target": "PHD",             "relationship": "HasAgency" }
+// ];
+
+const nodes6 = [
+    {"name": "WouldBeReturnee",   "description": ""},
+    {"name": "Samer1",            "description": ""},
+    {"name": "Samer2",            "description": ""},
+    {"name": "Samer3",            "description": ""},
+    {"name": "PHD",               "description": ""},
+    {"name": "Remittance",        "description": ""},
+    {"name": "Friends",           "description": ""},
+    {"name": "CastleInSyria",     "description": ""},
+    {"name": "Poor",              "description": ""},
+    {"name": "HighAgency",        "description": ""},
+    {"name": "Transnationalism",  "description": ""},
+    {"name": "HomeBelonging",     "description": ""},
+    {"name": "HomeAttachment",    "description": ""},
+    {"name": "LowAgency",         "description": ""},
+]
+const edges6 = [
+    {"source":"WouldBeReturnee"    , "target": "Samer1"         , "relationship": ""},
+    {"source":"WouldBeReturnee"    , "target": "Samer2"         , "relationship": ""},
+    {"source":"WouldBeReturnee"    , "target": "Samer3"         , "relationship": ""},
+    {"source":"Samer1"             , "target": "PHD"            , "relationship": ""},
+    {"source":"Samer1"             , "target": "Remittance"     , "relationship": ""},
+    {"source":"Samer2"             , "target": "Friends"        , "relationship": ""},
+    {"source":"Samer3"             , "target": "CastleInSyria"  , "relationship": ""},
+    {"source":"Samer3"             , "target": "Poor"           , "relationship": ""},
+    {"source":"HighAgency"         , "target": "PHD"            , "relationship": ""},
+    {"source":"Transnationalism"   , "target": "Remittance"     , "relationship": ""},
+    {"source":"HomeBelonging"      , "target": "Friends"        , "relationship": ""},
+    {"source":"HomeAttachment"     , "target": "CastleInSyria"  , "relationship": ""},
+    {"source":"LowAgency"          , "target": "Poor"           , "relationship": ""}
+]
+go(nodes6, edges6)
+// function query1() {
+//     go(nodes1, edges1);
+// }
+// function query2() {
+//     go(nodes2, edges2);
+// }
+// function query3() {
+//     go(nodes3, edges3);
+// }
+// function query4() {
+//     go(nodes4, edges4);
+// }
+// function query5() {
+//     go(nodes5, edges5);
+// }
 
 function go(nodes0, edges0) {
     var svg_query = d3.select("#svg_query");
@@ -125,7 +156,7 @@ function go(nodes0, edges0) {
             .on("start", dragstarted_query)
             .on("drag", dragged_query)
             .on("end", dragended_query))
-        .on("click", click_query);
+        // .on("click", click_query);
 
     // Add labels to the nodes1
     const label_query = svg_query.selectAll(null)
@@ -188,11 +219,11 @@ function go(nodes0, edges0) {
     }
 
     // Define the click function
-    function click_query(d) {
-        d3.selectAll("circle").attr("fill", "#ccc");
-        d3.select(this).attr("fill", "orange");
-        d3.select("#description_query").text(d.description);
-    }
+    // function click_query(d) {
+    //     d3.selectAll("circle").attr("fill", "#ccc");
+    //     d3.select(this).attr("fill", "orange");
+    //     d3.select("#description_query").text(d.description);
+    // }
 
     // Define the dragging functions
     function dragstarted_query(d) {

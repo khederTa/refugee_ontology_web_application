@@ -10,17 +10,17 @@
 <body>
     <nav>
         <h1>REFUGEE ONTOLOGY</h1>
-        <a href="#query">QUERY  </a>
+        <a href="#query">QUERY </a>
         <a href="#concept">CONCEPT</a>
-        <a href="#abstract">ABSTRACT</a>
+        <a href="#intro">INTRODUCTION</a>
     </nav>
     <main>
-        <div class="intro">
-            <aside class="left-intro">
+        <div class="abstract">
+            <aside class="left-abstract">
                 <h2>THE TITLE OF PAPER</h2>
-               <!-- <a href="#abstract" class="learn">LEARN MORE</a>-->
+                <!--<a href="#intro" class="learn">LEARN MORE</a>-->
             </aside>
-            <section class="right-intro">
+            <section class="right-abstract">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis accusantium consectetur
                     aspernatur nobis facere corporis dolores beatae voluptate harum sint sit nam inventore placeat,
@@ -36,10 +36,10 @@
             </section>
         </div>
         <hr />
-        <div class="abstract">
-            <section class="abstract-section">
-                <header class="abstract-header">
-                    <a id="abstract">ABSTRACT</a>
+        <div class="intro">
+            <section class="intro-section">
+                <header class="intro-header">
+                    <a id="intro">INTRODUCTION</a>
                 </header>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nisi eveniet ex tempora debitis
@@ -85,16 +85,29 @@
             <div class="query">
 
                 <aside class="left-query">
-                    <p id="description_query"></p>
+                    <p id="description_query">
+                        We have three groups of instances of Would-be Returnee: Samer1, Samer2, Samer3.
+                    <ul>
+                        <li>
+                            <b>Samer1</b> is a Would-be Returnee because he has high Agency (instance: PhD student) and he
+                            practices Transnationalism (instance: Remittance).</li>
+                        <li>
+                            <b>Samer2</b> is a Would-be Returnee because he has Home Belonging (instance: Friends).</li>
+                        <li>
+                            <b>Samer3</b> is a would-be Returnee because he has Home Attachment (instance: Castle in Syria).
+                        </li>
+                    </ul>
+                    This is a query of all instances that are Would-be Returnees with their properties.
+                    </p>
                 </aside>
                 <section class="right-query">
                     <svg width="400" height="300" id="svg_query"></svg>
                 </section>
-                <button class="query-button" onclick="query1()">Has Agency</button>
+                <!-- <button class="query-button" onclick="query1()">Has Agency</button>
                 <button class="query-button" onclick="query2()">Refugee Would Be Returnee</button>
                 <button class="query-button" onclick="query3()">Refugee Would Be Returnee But Only Refugee</button>
                 <button class="query-button" onclick="query4()">Subclass Of Refugee</button>
-                <button class="query-button" onclick="query5()">The Properties Of Refugees Who Are Would Be Returnee</button>
+                <button class="query-button" onclick="query5()">The Properties Of Refugees Who Are Would Be Returnee</button> -->
             </div>
         </div>
     </main>

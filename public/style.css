@@ -26,7 +26,6 @@ h2 {
     border-radius: 5px;
     padding: 15px 32px;
     margin: 4px 2px;
-    width: auto;
 }
 
 .learn:hover {
@@ -62,37 +61,37 @@ nav a:hover {
     color: #e7dfd8;
 }
 
-.intro {
+.abstract {
     display: flex;
 
 }
 
-.left-intro {
+.left-abstract {
     flex: 40%;
     padding: 30px;
 }
 
-.right-intro {
+.right-abstract {
     flex: 60%;
     padding: 30px;
     padding-top: 50px;
 }
 
-.abstract {
+.intro {
     text-align: center;
 }
 
-.abstract-header {
+.intro-header {
     padding: 20px;
     display: inline-block;
     font-weight: bold;
 }
 
-.abstract-section {
+.intro-section {
     padding: 30px;
 }
 
-.abstract p {
+.intro p {
     text-align: center;
 }
 
@@ -133,7 +132,8 @@ nav a:hover {
 .left-query {
     display: inline-block;
     width: 49%;
-    vertical-align: top;
+    vertical-align: center;
+    text-align: left;
     padding: 30px;
     
 }
@@ -173,7 +173,9 @@ footer{
     margin: 10%;
     padding: 10%;
 }
-
+line:hover{
+    fill: red;
+}
 @media (max-width: 900px) {
 
     .intro,
