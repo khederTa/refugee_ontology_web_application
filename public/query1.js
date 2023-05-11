@@ -73,20 +73,20 @@
 // ];
 
 const nodes6 = [
-    {"name": "WouldBeReturnee",   "description": ""},
-    {"name": "Samer1",            "description": ""},
-    {"name": "Samer2",            "description": ""},
-    {"name": "Samer3",            "description": ""},
-    {"name": "PHD",               "description": ""},
-    {"name": "Remittance",        "description": ""},
-    {"name": "Friends",           "description": ""},
-    {"name": "CastleInSyria",     "description": ""},
-    {"name": "Poor",              "description": ""},
-    {"name": "HighAgency",        "description": ""},
-    {"name": "Transnationalism",  "description": ""},
-    {"name": "HomeBelonging",     "description": ""},
-    {"name": "HomeAttachment",    "description": ""},
-    {"name": "LowAgency",         "description": ""},
+    {"name": "WouldBeReturnee",   "description": "",  "color": "#555"},
+    {"name": "Samer1",            "description": "",  "color": "#AAA"},
+    {"name": "Samer2",            "description": "",  "color": "#AAA"},
+    {"name": "Samer3",            "description": "",  "color": "#AAA"},
+    {"name": "PHD",               "description": "",  "color": "#AAA"},
+    {"name": "Remittance",        "description": "",  "color": "#AAA"},
+    {"name": "Friends",           "description": "",  "color": "#AAA"},
+    {"name": "CastleInSyria",     "description": "",  "color": "#AAA"},
+    {"name": "Poor",              "description": "",  "color": "#AAA"},
+    {"name": "HighAgency",        "description": "",  "color": "#555"},
+    {"name": "Transnationalism",  "description": "",  "color": "#555"},
+    {"name": "HomeBelonging",     "description": "",  "color": "#555"},
+    {"name": "HomeAttachment",    "description": "",  "color": "#555"},
+    {"name": "LowAgency",         "description": "",  "color": "#555"},
 ]
 const edges6 = [
     {"source":"WouldBeReturnee"    , "target": "Samer1"         , "relationship": ""},
@@ -149,7 +149,7 @@ function go(nodes0, edges0) {
         .data(nodes0)
         .enter().append("circle")
         .attr("r", 10)
-        .attr("fill", "#ccc")
+        .attr("fill", d=>d.color)
         .attr("stroke", "#fff")
         .attr("stroke-width", 2)
         .call(d3.drag()
@@ -194,11 +194,11 @@ function go(nodes0, edges0) {
         d3.select(this).attr("stroke-width", 2);
     });
 
-    link_query.on("mouseover", function () {
-        d3.select(this).attr("stroke-width", 3);
-    }).on("mouseout", function () {
-        d3.select(this).attr("stroke-width", 1);
-    });
+    // link_query.on("mouseover", function () {
+    //     d3.select(this).attr("stroke-width", 3);
+    // }).on("mouseout", function () {
+    //     d3.select(this).attr("stroke-width", 1);
+    // });
 
     // Start the simulation
     simulation_query.on("tick", ticked_query);
