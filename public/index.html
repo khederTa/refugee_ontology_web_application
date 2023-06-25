@@ -84,7 +84,68 @@
             </header>
             <div class="query">
 
-                <aside class="left-query">
+                <form action="/" method="get">
+                    <span>SELECT DISTINCT ?refugee WHERE</span>
+
+                    <div class="cond-box">
+                        <label>Belong To</label>
+                        <input type="radio" name="belongTo" id="homeBelonging"><label for="homeBelonging">Home
+                            Belonging</label>
+                        <input type="radio" name="belongTo" id="hostBelonging"><label for="hostBelonging">Host
+                            Belonging</label>
+                    </div>
+
+                    <div class="cond-box">
+                        <label>Has Agency</label>
+                        <input type="radio" name="hasAgency" id="highAgency"><label for="highAgency">High Agency</label>
+                        <input type="radio" name="hasAgency" id="lowAgency"><label for="lowAgency">Low Agency</label>
+                    </div>
+
+                    <div class="cond-box">
+                        <label>Has Expected Level Of Reintegration</label>
+                        <input type="radio" name="reintegration" id="economicWellbeing"><label
+                            for="economicWellbeing">Economic Wellbeing</label>
+                        <input type="radio" name="reintegration" id="politicalProcess"><label
+                            for="politicalProcess">Political Process</label>
+                        <input type="radio" name="reintegration" id="socialCapital"><label for="socialCapital">Social
+                            Capital</label>
+                    </div>
+
+                    <div class="cond-box">
+                        <label>Has Home</label>
+                        <input type="checkbox" name="homePlace" id="homePlace"><label for="homePlace">Home Place</label>
+                    </div>
+
+                    <div class="cond-box">
+                        <label>Has Level Of Integration</label>
+                        <input type="radio" name="integration" id="culturalIntegration"><label for="culturalIntegration">Cultural Integration</label>
+                        <input type="radio" name="integration" id="economicIntegration"><label for="economicIntegration">Economic Integration</label>
+                        <input type="radio" name="integration" id="socialIntegration"><label for="socialIntegration">Social Integration</label>
+                    </div>
+
+                    <div class="cond-box">
+                        <label>Is Attached To</label>
+                        <input type="radio" name="attachment" id="homeAttachment"><label
+                            for="homeAttachment">Home Attachment</label>
+                        <input type="radio" name="attachment" id="hostAttachment"><label
+                            for="hostAttachment">Host Attachment</label>
+                    </div>
+                    
+                    <div class="cond-box">
+                        <label>Make Place Of</label>
+                        <input type="radio" name="placeMaking" id="homeMaking"><label
+                            for="homeMaking">Home Making</label>
+                        <input type="radio" name="placeMaking" id="hostMaking"><label
+                            for="hostMaking">Host Making</label>
+                    </div>
+
+                    <div class="submit-query">
+                        <input type="submit" value="Make Query">
+                    </div>
+
+                </form>
+                
+                <!--<aside class="left-query">
                     <p id="description_query">
                         We have three groups of instances of Would-be Returnee: Samer1, Samer2, Samer3.
                     <ul>
@@ -102,7 +163,7 @@
                 </aside>
                 <section class="right-query">
                     <svg width="500" height="400" id="svg_query"></svg>
-                </section>
+                </section> -->
                 <!-- <button class="query-button" onclick="query1()">Has Agency</button>
                 <button class="query-button" onclick="query2()">Refugee Would Be Returnee</button>
                 <button class="query-button" onclick="query3()">Refugee Would Be Returnee But Only Refugee</button>
