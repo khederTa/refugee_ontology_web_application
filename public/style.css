@@ -161,7 +161,23 @@ nav a:hover {
 .query-button:hover {
     background-color: #463f37;
 }
+.cond-box{
+    text-align: left;
+    margin: 15px 25%;
+    width: 75%;
+}
 
+.submit-query > input{
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #302b25;
+    background-color: #e0d8d1;
+    cursor: pointer;
+}
+.submit-query > input:hover{
+    color: #e7dfd8;
+    background-color: #302b25;
+}
 header {
     font-weight: bold;
     font-size: 30px;
