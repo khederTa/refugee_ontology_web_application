@@ -178,6 +178,9 @@ nav a:hover {
     color: #e7dfd8;
     background-color: #302b25;
 }
+.query-name{
+    font-weight: bold;
+}
 header {
     font-weight: bold;
     font-size: 30px;
