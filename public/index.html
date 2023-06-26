@@ -84,59 +84,63 @@
             </header>
             <div class="query">
 
-                <form action="/" method="get">
-                    <span>SELECT DISTINCT ?refugee WHERE</span>
+                <form action="/query" method="POST">
+                    <span>SELECT DISTINCT ?refugee ? WHERE</span>
 
                     <div class="cond-box">
-                        <label>Belong To</label>
-                        <input type="radio" name="belongTo" id="homeBelonging"><label for="homeBelonging">Home
+                        <label class="query-name" title="Belonging is generally to a group; to which extent a refugee is self-identified as a member of x group (national, religious, ethnic, etc.).">Refugee Belongs To: </label>
+                        <input type="checkbox" name="homeBelonging" id="homeBelonging"><label for="homeBelonging">Home
                             Belonging</label>
-                        <input type="radio" name="belongTo" id="hostBelonging"><label for="hostBelonging">Host
+                        <input type="checkbox" name="hostBelonging" id="hostBelonging"><label for="hostBelonging">Host
                             Belonging</label>
                     </div>
 
                     <div class="cond-box">
-                        <label>Has Agency</label>
-                        <input type="radio" name="hasAgency" id="highAgency"><label for="highAgency">High Agency</label>
-                        <input type="radio" name="hasAgency" id="lowAgency"><label for="lowAgency">Low Agency</label>
+                        <label class="query-name" title="Refugee Agency is the capability of refugees to act, to choose, to be as they believe that will serve their well-being the best. It is, in othre words, to be autonomous.">Refugee Has Agency: </label>
+                        <input type="radio" id="highAgency" name="hasAgency" value="highAgency"><label for="highAgency">High Agency</label>
+                        <input type="radio" id="lowAgency" name="hasAgency" value="lowAgency"><label for="lowAgency">Low Agency</label>
+                        
+                        
                     </div>
 
                     <div class="cond-box">
-                        <label>Has Expected Level Of Reintegration</label>
-                        <input type="radio" name="reintegration" id="economicWellbeing"><label
+                        <label class="query-name" title="Reintegration It is the ability of those who return to re-establsih their lives in their countries of origin.">Refugee Has Expected Level Of Reintegration: </label>
+                        <input type="checkbox" name="economicWellbeing" id="economicWellbeing"><label
                             for="economicWellbeing">Economic Wellbeing</label>
-                        <input type="radio" name="reintegration" id="politicalProcess"><label
+                        <input type="checkbox" name="politicalProcess" id="politicalProcess"><label
                             for="politicalProcess">Political Process</label>
-                        <input type="radio" name="reintegration" id="socialCapital"><label for="socialCapital">Social
+                        <input type="checkbox" name="socialCapital" id="socialCapital"><label for="socialCapital">Social
                             Capital</label>
                     </div>
 
                     <div class="cond-box">
-                        <label>Has Home</label>
-                        <input type="checkbox" name="homePlace" id="homePlace"><label for="homePlace">Home Place</label>
+                        <label class="query-name" title="Integration is the Refugee level of integration in her host place/country.">Refugee Has Level Of Integration: </label>
+                        <input type="checkbox" name="culturalIntegration" id="culturalIntegration"><label for="culturalIntegration">Cultural Integration</label>
+                        <input type="checkbox" name="economicIntegration" id="economicIntegration"><label for="economicIntegration">Economic Integration</label>
+                        <input type="checkbox" name="socialIntegration" id="socialIntegration"><label for="socialIntegration">Social Integration</label>
                     </div>
 
                     <div class="cond-box">
-                        <label>Has Level Of Integration</label>
-                        <input type="radio" name="integration" id="culturalIntegration"><label for="culturalIntegration">Cultural Integration</label>
-                        <input type="radio" name="integration" id="economicIntegration"><label for="economicIntegration">Economic Integration</label>
-                        <input type="radio" name="integration" id="socialIntegration"><label for="socialIntegration">Social Integration</label>
-                    </div>
-
-                    <div class="cond-box">
-                        <label>Is Attached To</label>
-                        <input type="radio" name="attachment" id="homeAttachment"><label
+                        <label class="query-name" title="Attachement is always to a place; to which extent a refugee is attached to a place as a part of her identity.">Refugee Is Attached To: </label>
+                        <input type="checkbox" name="homeAttachment" id="homeAttachment"><label
                             for="homeAttachment">Home Attachment</label>
-                        <input type="radio" name="attachment" id="hostAttachment"><label
+                        <input type="checkbox" name="hostAttachment" id="hostAttachment"><label
                             for="hostAttachment">Host Attachment</label>
                     </div>
                     
                     <div class="cond-box">
-                        <label>Make Place Of</label>
-                        <input type="radio" name="placeMaking" id="homeMaking"><label
+                        <label class="query-name" title="How a refugee forms a place that she desires to live in; what is this place? her home? her host? neither?">Refugee Makes Place Of: </label>
+                        <input type="checkbox" name="homeMaking" id="homeMaking"><label
                             for="homeMaking">Home Making</label>
-                        <input type="radio" name="placeMaking" id="hostMaking"><label
+                        <input type="checkbox" name="hostMaking" id="hostMaking"><label
                             for="hostMaking">Host Making</label>
+                    </div>
+
+                    <div class="cond-box">
+                        <label class="query-name" title="Transnationalism Activities of refugees that link or bridge multiple places together, home and host. These activities or practices can be endorsed at the everyday level or in the long term.">Refugee Practices Transnationalism: </label>
+                        <input type="checkbox" name="transnationalism" id="transnationalism"><label
+                            for="transnationalism">Practices Transnationalism</label>
+    
                     </div>
 
                     <div class="submit-query">
