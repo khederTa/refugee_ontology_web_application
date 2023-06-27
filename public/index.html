@@ -83,96 +83,111 @@
                 <a id="query">QUERY EXPLANATION</a>
             </header>
             <div class="query">
+                <aside class="left-query">
+                    <form action="/query" method="POST">
+                        <h2>Make Queries On Refugees</h2>
 
-                <form action="/query" method="POST">
-                    <span>SELECT DISTINCT ?refugee ? WHERE</span>
+                        <div class="cond-box">
+                            <label class="query-name"
+                                title="Belonging is generally to a group; to which extent a refugee is self-identified as a member of x group (national, religious, ethnic, etc.).">Refugee
+                                Belongs To: </label> <br />
+                            <input type="checkbox" name="homeBelonging" id="homeBelonging"><label
+                                for="homeBelonging">Home
+                                Belonging</label>
+                            <input type="checkbox" name="hostBelonging" id="hostBelonging"><label
+                                for="hostBelonging">Host
+                                Belonging</label>
+                        </div>
 
-                    <div class="cond-box">
-                        <label class="query-name" title="Belonging is generally to a group; to which extent a refugee is self-identified as a member of x group (national, religious, ethnic, etc.).">Refugee Belongs To: </label>
-                        <input type="checkbox" name="homeBelonging" id="homeBelonging"><label for="homeBelonging">Home
-                            Belonging</label>
-                        <input type="checkbox" name="hostBelonging" id="hostBelonging"><label for="hostBelonging">Host
-                            Belonging</label>
-                    </div>
+                        <div class="cond-box">
+                            <label class="query-name"
+                                title="Refugee Agency is the capability of refugees to act, to choose, to be as they believe that will serve their well-being the best. It is, in othre words, to be autonomous.">Refugee
+                                Has Agency: </label> <br />
+                            <input type="radio" id="highAgency" name="hasAgency" value="HighAgency"><label
+                                for="highAgency">High Agency</label>
+                            <input type="radio" id="lowAgency" name="hasAgency" value="LowAgency" checked><label
+                                for="lowAgency">Low
+                                Agency</label>
 
-                    <div class="cond-box">
-                        <label class="query-name" title="Refugee Agency is the capability of refugees to act, to choose, to be as they believe that will serve their well-being the best. It is, in othre words, to be autonomous.">Refugee Has Agency: </label>
-                        <input type="radio" id="highAgency" name="hasAgency" value="highAgency"><label for="highAgency">High Agency</label>
-                        <input type="radio" id="lowAgency" name="hasAgency" value="lowAgency"><label for="lowAgency">Low Agency</label>
-                        
-                        
-                    </div>
 
-                    <div class="cond-box">
-                        <label class="query-name" title="Reintegration It is the ability of those who return to re-establsih their lives in their countries of origin.">Refugee Has Expected Level Of Reintegration: </label>
-                        <input type="checkbox" name="economicWellbeing" id="economicWellbeing"><label
-                            for="economicWellbeing">Economic Wellbeing</label>
-                        <input type="checkbox" name="politicalProcess" id="politicalProcess"><label
-                            for="politicalProcess">Political Process</label>
-                        <input type="checkbox" name="socialCapital" id="socialCapital"><label for="socialCapital">Social
-                            Capital</label>
-                    </div>
+                        </div>
 
-                    <div class="cond-box">
-                        <label class="query-name" title="Integration is the Refugee level of integration in her host place/country.">Refugee Has Level Of Integration: </label>
-                        <input type="checkbox" name="culturalIntegration" id="culturalIntegration"><label for="culturalIntegration">Cultural Integration</label>
-                        <input type="checkbox" name="economicIntegration" id="economicIntegration"><label for="economicIntegration">Economic Integration</label>
-                        <input type="checkbox" name="socialIntegration" id="socialIntegration"><label for="socialIntegration">Social Integration</label>
-                    </div>
+                        <div class="cond-box">
+                            <label class="query-name"
+                                title="Reintegration It is the ability of those who return to re-establsih their lives in their countries of origin.">Refugee
+                                Has Expected Level Of Reintegration: </label> <br />
+                            <input type="checkbox" name="economicWellbeing" id="economicWellbeing"><label
+                                for="economicWellbeing">Economic Wellbeing</label>
+                            <input type="checkbox" name="politicalProcess" id="politicalProcess"><label
+                                for="politicalProcess">Political Process</label>
+                            <input type="checkbox" name="socialCapital" id="socialCapital"><label
+                                for="socialCapital">Social
+                                Capital</label>
+                        </div>
 
-                    <div class="cond-box">
-                        <label class="query-name" title="Attachement is always to a place; to which extent a refugee is attached to a place as a part of her identity.">Refugee Is Attached To: </label>
-                        <input type="checkbox" name="homeAttachment" id="homeAttachment"><label
-                            for="homeAttachment">Home Attachment</label>
-                        <input type="checkbox" name="hostAttachment" id="hostAttachment"><label
-                            for="hostAttachment">Host Attachment</label>
-                    </div>
-                    
-                    <div class="cond-box">
-                        <label class="query-name" title="How a refugee forms a place that she desires to live in; what is this place? her home? her host? neither?">Refugee Makes Place Of: </label>
-                        <input type="checkbox" name="homeMaking" id="homeMaking"><label
-                            for="homeMaking">Home Making</label>
-                        <input type="checkbox" name="hostMaking" id="hostMaking"><label
-                            for="hostMaking">Host Making</label>
-                    </div>
+                        <div class="cond-box">
+                            <label class="query-name"
+                                title="Integration is the Refugee level of integration in her host place/country.">Refugee
+                                Has Level Of Integration: </label> <br />
+                            <input type="checkbox" name="culturalIntegration" id="culturalIntegration"><label
+                                for="culturalIntegration">Cultural Integration</label>
+                            <input type="checkbox" name="economicIntegration" id="economicIntegration"><label
+                                for="economicIntegration">Economic Integration</label>
+                            <input type="checkbox" name="socialIntegration" id="socialIntegration"><label
+                                for="socialIntegration">Social Integration</label>
+                        </div>
 
-                    <div class="cond-box">
-                        <label class="query-name" title="Transnationalism Activities of refugees that link or bridge multiple places together, home and host. These activities or practices can be endorsed at the everyday level or in the long term.">Refugee Practices Transnationalism: </label>
-                        <input type="checkbox" name="transnationalism" id="transnationalism"><label
-                            for="transnationalism">Practices Transnationalism</label>
-    
-                    </div>
+                        <div class="cond-box">
+                            <label class="query-name"
+                                title="Attachement is always to a place; to which extent a refugee is attached to a place as a part of her identity.">Refugee
+                                Is Attached To: </label> <br />
+                            <input type="checkbox" name="homeAttachment" id="homeAttachment"><label
+                                for="homeAttachment">Home Attachment</label>
+                            <input type="checkbox" name="hostAttachment" id="hostAttachment"><label
+                                for="hostAttachment">Host Attachment</label>
+                        </div>
 
-                    <div class="submit-query">
-                        <input type="submit" value="Make Query">
-                    </div>
+                        <div class="cond-box">
+                            <label class="query-name"
+                                title="How a refugee forms a place that she desires to live in; what is this place? her home? her host? neither?">Refugee
+                                Makes Place Of: </label> <br />
+                            <input type="checkbox" name="homeMaking" id="homeMaking"><label for="homeMaking">Home
+                                Making</label>
+                            <input type="checkbox" name="hostMaking" id="hostMaking"><label for="hostMaking">Host
+                                Making</label>
+                        </div>
 
-                </form>
-                
-                <!--<aside class="left-query">
-                    <p id="description_query">
-                        We have three groups of instances of Would-be Returnee: Samer1, Samer2, Samer3.
-                    <ul>
-                        <li>
-                            <b>Samer1</b> is a Would-be Returnee because he has high Agency (instance: PhD student) and he
-                            practices Transnationalism (instance: Remittance).</li>
-                        <li>
-                            <b>Samer2</b> is a Would-be Returnee because he has Home Belonging (instance: Friends).</li>
-                        <li>
-                            <b>Samer3</b> is a would-be Returnee because he has Home Attachment (instance: Castle in Syria).
-                        </li>
-                    </ul>
-                    This is a query of all instances that are Would-be Returnees with their properties.
-                    </p>
+                        <div class="cond-box">
+                            <label class="query-name"
+                                title="Transnationalism Activities of refugees that link or bridge multiple places together, home and host. These activities or practices can be endorsed at the everyday level or in the long term.">Refugee
+                                Practices Transnationalism: </label> <br />
+                            <input type="checkbox" name="weak" id="weak"><label for="weak">Weak</label>
+                            <input type="checkbox" name="no" id="no"><label for="no">No</label>
+
+                        </div>
+
+                        <div class="submit-query">
+                            <input type="submit" value="Make Query">
+                            <input type="reset" value="Reset">
+                        </div>
+
+                    </form>
+                    <form action="/returnee" method="POST">
+                        <div class="submit-query">
+                            <input type="submit" value="Refugee Would Be Returnee Query">
+                        </div>
+                    </form>
                 </aside>
                 <section class="right-query">
-                    <svg width="500" height="400" id="svg_query"></svg>
-                </section> -->
-                <!-- <button class="query-button" onclick="query1()">Has Agency</button>
-                <button class="query-button" onclick="query2()">Refugee Would Be Returnee</button>
-                <button class="query-button" onclick="query3()">Refugee Would Be Returnee But Only Refugee</button>
-                <button class="query-button" onclick="query4()">Subclass Of Refugee</button>
-                <button class="query-button" onclick="query5()">The Properties Of Refugees Who Are Would Be Returnee</button> -->
+                   <!-- {{sparql_query}} -->
+                    <div class="result">
+                        <h2>Query Result</h2>
+                       <!-- {% for item in result %}
+                            <p>{{ item }}</p>
+                        {% endfor %} -->
+                    </div>
+
+                </section>
             </div>
         </div>
     </main>
